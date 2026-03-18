@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+/* ── HEADER ── */
+header {
+  background-color: #1a3a5c;
+  color: white;
+  padding: 18px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 20px;
+}
+
+header p {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #aed6f1;
+}
+
+/* ── CONTAINER ── */
+.container {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+/* ── CARD ── */
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 24px 20px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+/* ── CLOCK DISPLAY ── */
+.clock-card {
+  background: #1a3a5c;
+}
+
+#clock {
+  font-size: 52px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+#date {
+  font-size: 16px;
+  color: #aed6f1;
+}
+
+/* ── ALARM CARD ── */
+.alarm-card h2 {
+  font-size: 16px;
+  color: #1a3a5c;
+  border-bottom: 2px solid #1a3a5c;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 4px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.form-group input[type="time"] {
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  background: white;
+}
+
+.form-group input[type="time"]:focus {
+  outline: none;
+  border-color: #1a3a5c;
+}
+
+/* ── BUTTONS ── */
+.btn-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+button {
+  flex: 1;
+  padding: 10px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #1a3a5c;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #12293f;
+}
+
+.btn-secondary {
+  background-color: #aab7b8;
+  color: #333;
+}
+
+.btn-secondary:hover {
+  background-color: #909ea0;
+}
+
+/* ── STATUS MESSAGE ── */
+#status {
+  margin-top: 14px;
+  font-size: 14px;
+  font-weight: bold;
+  min-height: 20px;
+  text-align: center;
+}
+
+#status.set     { color: #1e8449; }
+#status.ringing { color: #c0392b; }
+#status.cleared { color: #888; }
+
+/* ── FOOTER ── */
+footer {
+  text-align: center;
+  padding: 16px;
+  font-size: 12px;
+  color: #888;
+  margin-top: 6px;
+}
+
+/* ══════════════════════════════
+   RESPONSIVE — MOBILE (≤ 480px)
+   ══════════════════════════════ */
+@media (max-width: 480px) {
+
+  header h1 { font-size: 16px; }
+  header p  { font-size: 11px; }
+
+  .container {
+    margin: 14px auto;
+    padding: 0 10px;
+  }
+
+  #clock {
+    font-size: 38px;
+    letter-spacing: 1px;
+  }
+
+  #date {
+    font-size: 13px;
+  }
+
+  .form-group input[type="time"] {
+    font-size: 16px; /* prevents iOS zoom */
+  }
+
+  button {
+    font-size: 14px;
+    padding: 11px;
+  }
+
+  .btn-row {
+    flex-direction: column;
+  }
+}

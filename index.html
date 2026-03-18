@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digital Clock and Alarm</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Digital Clock &amp; Alarm</h1>
+    <p>JavaScript ES6 Minor Project &nbsp;|&nbsp; TMSL ECS</p>
+  </header>
+
+  <div class="container">
+
+    <!-- Clock Card -->
+    <div class="card clock-card">
+      <div id="clock">00:00:00 AM</div>
+      <div id="date">Loading date...</div>
+    </div>
+
+    <!-- Alarm Card -->
+    <div class="card alarm-card">
+      <h2>Set Alarm</h2>
+      <div class="form-group">
+        <label for="alarmTime">Select Alarm Time</label>
+        <input type="time" id="alarmTime" />
+      </div>
+      <div class="btn-row">
+        <button class="btn-primary" onclick="setAlarm()">Set Alarm</button>
+        <button class="btn-secondary" onclick="clearAlarm()">Clear Alarm</button>
+      </div>
+      <div id="status"></div>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2025 Digital Clock &amp; Alarm &mdash; TMSL ECS Minor Project
+  </footer>
+
+  <audio id="alarmSound" src="./alarm.mp3"></audio>
+  <script src="./index.js"></script>
+</body>
+</html>
